@@ -1,6 +1,3 @@
-# LPHPopTable
-Display a table. 
-
 /**
  
     调用示例:
@@ -21,5 +18,3 @@ Display a table.
     }];
  
  */
-
-![image](https://github.com/iosraven/LPHScan/blob/master/IMG_InputQRCode.PNG)

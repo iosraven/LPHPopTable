@@ -1,13 +1,8 @@
-# LPHPopTable
-Display a table. 
-
 /**
  
     调用示例:
-    1. 引入 #import "LPHPopTable.h"
  
- 
-    2. 示例： NSArray *arr = @[
+    NSArray *arr = @[
         @{@"Text":@"车窗检查通过",@"Pass":@1},
         @{@"Text":@"地板检查通过",@"Pass":@1},
         @{@"Text":@"机械检查不通过",@"Pass":@0},
@@ -21,5 +16,3 @@ Display a table.
     }];
  
  */
-
-![image](https://github.com/iosraven/LPHScan/blob/master/IMG_InputQRCode.PNG)

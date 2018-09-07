@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "LPHPopTable.spec"
+  s.name         = "LPHPopTable"
   s.version      = "0.0.1"
   s.summary      = "Display a table."
 
@@ -65,7 +65,7 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-  # s.platform     = :ios, "9.0"
+   s.platform     = :ios, "9.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -106,9 +106,7 @@ Pod::Spec.new do |s|
   #
 
    s.resource  = "LPHPopTable/*.png"
-   s.resource_bundles = {
-    'LPHPopTable' => ['{LPHPopTable}/*.xib']
-   }
+   s.resource_bundles = {'LPHPopTable' => ['{LPHPopTable}/*.xib']}
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 

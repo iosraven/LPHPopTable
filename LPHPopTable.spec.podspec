@@ -106,9 +106,9 @@ Pod::Spec.new do |s|
   #
 
    s.resource  = "LPHPopTable/*.png"
-  s.resource_bundles = {
+   s.resource_bundles = {
     'LPHPopTable' => ['{LPHPopTable}/*.xib']
-   }"
+   }
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 

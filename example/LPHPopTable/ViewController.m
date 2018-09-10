@@ -38,8 +38,29 @@
                      @{@"Text":@"机械检查不通过",@"Pass":@0},
                      @{@"Text":@"室内检查通过",@"Pass":@1},
                      @{@"Text":@"",@"Pass":@0}];
-    [LPHPopTable popWithArray:arr title:@"内容项" popBlock:^(NSInteger index) {
-        NSLog(@"点击第 %ld 个",index);
+    
+//    [LPHPopTable popWithArray:arr title:@"内容项" popBlock:^(NSInteger index) {
+//        NSLog(@"点击第 %ld 个",index);
+//    }];
+    
+    
+    CGRect viewCGRect = CGRectMake(50, 200, 300, 400);
+    CGPoint point = CGPointMake(viewCGRect.size.width * 3/4 + viewCGRect.origin.x, viewCGRect.origin.y +viewCGRect.size.height);
+    [LPHPopTable popWithArray:arr
+                        title:@"内容项"
+                   viewCGRect:viewCGRect
+                        point:point
+                     popBlock:^(NSInteger index) {
+    
+//    CGRect viewCGRect = CGRectMake(50, 200, 300, 400);
+//    CGPoint point = CGPointMake(viewCGRect.size.width * 3/4 + viewCGRect.origin.x, viewCGRect.origin.y +viewCGRect.size.height);
+//    [LPHPopTable popWithArray:arr
+//                        title:@"内容项"
+//                   viewCGRect:viewCGRect
+//                        point:point
+//                    showImage:NO
+//                     popBlock:^(NSInteger index) {
+    
     }];
 }
 

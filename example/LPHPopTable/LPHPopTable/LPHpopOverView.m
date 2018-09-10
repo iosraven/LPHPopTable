@@ -1,10 +1,4 @@
-//
-//  LPHpopOverView.m
-//  popview
-//
-//  Created by lupeihan on 15/8/18.
-//  Copyright © 2018 lupeihan. All rights reserved.
-//
+
 
 #import "LPHpopOverView.h"
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
@@ -24,7 +18,10 @@
 @implementation LPHpopOverView
 
 
--(instancetype)initWithOrigin:(CGPoint)origin Width:(CGFloat)width Height:(float)height
+-(instancetype)initWithOrigin:(CGPoint)origin
+                        Width:(float)Width
+                       Height:(float)Height
+                  arrowsPoint:(CGPoint)arrowsPoint
 {
     if (self = [super initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)])
     {
@@ -37,17 +34,17 @@
         
         //定义显示视图的参数
         self.origin = origin;
-        self.height = height;
-        self.width = width;
+        self.height = Height;
+        self.width = Width;
         
-        self.backView=[[UIView alloc]initWithFrame:CGRectMake(origin.x, origin.y, width, height)];
+        self.backView=[[UIView alloc]initWithFrame:CGRectMake(origin.x, origin.y, Width,  Height)];
         self.backView.backgroundColor=[UIColor whiteColor];
         self.backView.layer.cornerRadius = 4;
         self.backView.layer.masksToBounds = YES;
         [self addSubview:self.backView];
         
         // 箭头位于backView下方中间
-        self.imgArrow = [[UIImageView alloc] initWithFrame:CGRectMake(origin.x, origin.y - 5, 20, 20)];
+        self.imgArrow = [[UIImageView alloc] initWithFrame:CGRectMake(arrowsPoint.x, arrowsPoint.y, 20, 20)];
         self.imgArrow.image = [UIImage imageNamed:@"Icon_PopDown.png"];
         self.imgArrow.contentMode = UIViewContentModeScaleToFill;
         [self addSubview:self.imgArrow];
@@ -89,10 +86,8 @@
     //动画效果弹出
     self.alpha = 0;
 
-    self.backView.frame = CGRectMake(self.origin.x, self.origin.y-5, 0, 0);
     [UIView animateWithDuration:0.2 animations:^{
         self.alpha = 1;
-        self.backView.frame = CGRectMake(self.origin.x-self.width/2, self.origin.y-5, self.width,-self. height);
     }completion:^(BOOL finished) {
         
         NSArray *result=[self.backView subviews];
@@ -118,7 +113,6 @@
     //动画效果淡出
     [UIView animateWithDuration:0.2 animations:^{
         self.alpha = 0;
-        self.backView.frame = CGRectMake(self.origin.x, self.origin.y, 0, 0);
     } completion:^(BOOL finished) {
         if (finished) {
             [self removeFromSuperview];

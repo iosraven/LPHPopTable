@@ -138,9 +138,24 @@ float cell_height = 50.0f;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString * cellIdebtifier = @"LPHPOPCell";
-    LPHPOPCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdebtifier];
+    
+    // 以下代码用于解决从cocopods加载的xib文件异常处理
+    NSString  *Bundle_Name = @"LPHPopTable.bundle";
+    NSString *Bundle_Path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:Bundle_Name];
+    NSBundle * Bundle = [NSBundle bundleWithPath:Bundle_Path];
+    if(Bundle)
+    {
+        [tableView registerNib:[UINib nibWithNibName:cellIdebtifier bundle:Bundle] forCellReuseIdentifier:cellIdebtifier];
+    }else
+    {
+        [tableView registerNib:[UINib nibWithNibName:cellIdebtifier bundle:[NSBundle mainBundle]] forCellReuseIdentifier:cellIdebtifier];
+    }
+    
+    
+    LPHPOPCell *cell =[tableView dequeueReusableCellWithIdentifier:cellIdebtifier forIndexPath:indexPath];
+    
     if (!cell) {
-        [tableView registerNib:[UINib nibWithNibName:cellIdebtifier bundle:nil] forCellReuseIdentifier:cellIdebtifier];
+        
         cell = [tableView dequeueReusableCellWithIdentifier:cellIdebtifier];
     }
     

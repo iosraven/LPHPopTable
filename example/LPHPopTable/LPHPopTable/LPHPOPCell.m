@@ -4,19 +4,12 @@
 
 @implementation LPHPOPCell
 
+
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-    
-    // 以下代码用于解决从cocopods加载的xib文件异常处理
-    NSString  *Bundle_Name = @"LPHPopTable.bundle";
-    NSString *Bundle_Path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:Bundle_Name];
-    NSBundle * Bundle = [NSBundle bundleWithPath:Bundle_Path];
-    if(Bundle)
-    {
-        self = [Bundle loadNibNamed:@"LPHPOPCell" owner:self options:nil].lastObject;
-    }
-    
+
     self.lbltitle.adjustsFontSizeToFitWidth = YES;
 }
 

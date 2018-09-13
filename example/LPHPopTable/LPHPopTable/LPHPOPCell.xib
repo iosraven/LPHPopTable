@@ -18,7 +18,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon_Pass" translatesAutoresizingMaskIntoConstraints="NO" id="Zu5-TX-fhu">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zu5-TX-fhu">
                         <rect key="frame" x="280" y="10" width="30" height="30"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="30" id="Toj-8Y-QBl"/>
@@ -59,7 +59,4 @@
             </connections>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="Icon_Pass" width="24" height="24"/>
-    </resources>
 </document>

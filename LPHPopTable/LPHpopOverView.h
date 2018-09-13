@@ -16,7 +16,19 @@
 // 弹出view框 箭头
 @property (nonatomic, strong) UIImageView *imgArrow;
 
--(instancetype)initWithOrigin:(CGPoint)origin Width:(CGFloat)width Height:(float)height;//初始化
+
+
+/**
+ *   初始化
+ *   origin：视图坐标
+ *   Width：视图宽度
+ *   Height：视图高度
+ *   arrowsPoint:箭头坐标
+ */
+-(instancetype)initWithOrigin:(CGPoint)origin
+                        Width:(float)Width
+                       Height:(float)Height
+                  arrowsPoint:(CGPoint)arrowsPoint;
 
 
 -(void)popView;//弹出视图

@@ -1,8 +1,10 @@
 /**
  
     调用示例:
+    1. 引入 #import "LPHPopTable.h"
  
-    NSArray *arr = @[
+ 
+    2. 示例： NSArray *arr = @[
         @{@"Text":@"车窗检查通过",@"Pass":@1},
         @{@"Text":@"地板检查通过",@"Pass":@1},
         @{@"Text":@"机械检查不通过",@"Pass":@0},

@@ -49,7 +49,6 @@
 		511AFB3021425EBD00AF5A75 /* LPHpopOverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPHpopOverView.m; sourceTree = "<group>"; };
 		511AFB3121425EBD00AF5A75 /* LPHPopTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPHPopTable.h; sourceTree = "<group>"; };
 		511AFB3221425EBD00AF5A75 /* LPHPopTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPHPopTable.m; sourceTree = "<group>"; };
-		511AFB3321425EBD00AF5A75 /* ReadMe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadMe.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +111,6 @@
 				511AFB3021425EBD00AF5A75 /* LPHpopOverView.m */,
 				511AFB3121425EBD00AF5A75 /* LPHPopTable.h */,
 				511AFB3221425EBD00AF5A75 /* LPHPopTable.m */,
-				511AFB3321425EBD00AF5A75 /* ReadMe.h */,
 			);
 			path = LPHPopTable;
 			sourceTree = "<group>";
